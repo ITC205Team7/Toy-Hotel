@@ -49,6 +49,13 @@ public class RecordServiceCTL {
 	
 	
 	public void serviceDetailsEntered(ServiceType serviceType, double cost) {
+		if (state != State.SERVICE){
+			throw RuntimeException("State is not Service");
+		}
+		hotel.addServiceCharge();
+		UI.displayServiceChargeMessage();
+		state = State.COMPLETED;
+		UI.state = State.COMPLETED;
 		// TODO Auto-generated method stub
 	}
 
