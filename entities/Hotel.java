@@ -85,7 +85,6 @@ public class Hotel {
 		return bookingsByConfirmationNumber.get(confirmationNumber);
 	}
 
-
 	public long book(Room room, Guest guest,
 			Date arrivalDate, int stayLength, int occupantNumber,
 			CreditCard creditCard) {
