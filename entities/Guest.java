@@ -1,4 +1,4 @@
-package hotel.entities;
+package entities;
 
 public class Guest {
 	
