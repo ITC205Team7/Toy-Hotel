@@ -89,7 +89,7 @@ public class Hotel {
 	public long book(Room room, Guest guest,
 			Date arrivalDate, int stayLength, int occupantNumber,
 			CreditCard creditCard) {
-	    
+
         Booking booking = room.book(guest,arrivalDate,stayLength,occupantNumber,creditCard);
         if (booking !=null){
 

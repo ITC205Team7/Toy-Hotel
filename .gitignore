@@ -12,7 +12,9 @@
 *.iws
 *.iml
 *.ipr
-
+.idea/*.*
+.idea/**
+/out
 ### NetBeans ###
 nbproject/private/
 build/
