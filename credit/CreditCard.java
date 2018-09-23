@@ -1,4 +1,4 @@
-package hotel.credit;
+package credit;
 
 public class CreditCard implements ICreditCard {
 	

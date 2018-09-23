@@ -25,8 +25,6 @@ public class Booking {
 	
 	private State state;
 
-
-	
 	public Booking(Guest guest, Room room, 
 			Date arrivalDate, int stayLength, 
 			int numberOfOccupants, 
@@ -75,7 +73,6 @@ public class Booking {
 
 		return doesConflict;
 	}
-
 
 	public long getConfirmationNumber() {
 		return confirmationNumber;

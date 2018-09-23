@@ -8,9 +8,9 @@ import hotel.credit.CreditCard;
 import hotel.utils.IOUtils;
 
 public class Room {
-	
+
 	private enum State {READY, OCCUPIED}
-	
+
 	int id;
 	RoomType roomType;
 	List<Booking> bookings;
