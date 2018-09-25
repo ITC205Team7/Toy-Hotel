@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/entities/Guest.java
 package hotel.entities;
+=======
+package entities;
+>>>>>>> master:entities/Guest.java
 
 public class Guest {
 	

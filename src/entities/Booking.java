@@ -25,8 +25,11 @@ public class Booking {
 	
 	private State state;
 
+<<<<<<< HEAD:src/entities/Booking.java
 
 	
+=======
+>>>>>>> master:entities/Booking.java
 	public Booking(Guest guest, Room room, 
 			Date arrivalDate, int stayLength, 
 			int numberOfOccupants, 
@@ -76,7 +79,10 @@ public class Booking {
 		return doesConflict;
 	}
 
+<<<<<<< HEAD:src/entities/Booking.java
 
+=======
+>>>>>>> master:entities/Booking.java
 	public long getConfirmationNumber() {
 		return confirmationNumber;
 	}
@@ -148,7 +154,11 @@ public class Booking {
        if(state !=State.CHECKED_IN){
            throw new RuntimeException("State is not Checkedin");
        }
+<<<<<<< HEAD:src/entities/Booking.java
        ServiceCharge serviceCharge = new ServiceCharge(serviceType, cost);
+=======
+       ServiceCharge serviceCharge = new ServiceCharge();
+>>>>>>> master:entities/Booking.java
        charges.add(serviceCharge);
 
 		// TODO Auto-generated method stub
@@ -157,9 +167,15 @@ public class Booking {
 
 	public void checkOut() {
 	    if(state !=State.CHECKED_IN){
+<<<<<<< HEAD:src/entities/Booking.java
 	        throw new RuntimeException("Cannot Checkin if the booking state is not Checkedin");
         }
         room.checkout(null);
+=======
+	        throw new RuntimeException("Cannot Checkin if the booking state is not Checkedin")
+        }
+        room.checkout;
+>>>>>>> master:entities/Booking.java
 	    state = State.CHECKED_OUT;
 
 		// TODO Auto-generated method stub

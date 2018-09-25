@@ -1,5 +1,9 @@
 package hotel.entities;
 
+<<<<<<< HEAD:src/entities/Hotel.java
+=======
+import java.awt.print.Book;
+>>>>>>> master:entities/Hotel.java
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -84,27 +88,95 @@ public class Hotel {
 		return bookingsByConfirmationNumber.get(confirmationNumber);
 	}
 
+<<<<<<< HEAD:src/entities/Hotel.java
 	
 	public long book(Room room, Guest guest, 
 			Date arrivalDate, int stayLength, int occupantNumber,
 			CreditCard creditCard) {
 		// TODO Auto-generated method stub
 		return 0L;		
+=======
+	public long book(Room room, Guest guest,
+			Date arrivalDate, int stayLength, int occupantNumber,
+			CreditCard creditCard) {
+
+        Booking booking = room.book(guest,arrivalDate,stayLength,occupantNumber,creditCard);
+        if (booking !=null){
+
+            bookingsByConfirmationNumber.put(booking.getConfirmationNumber(),booking);
+            return booking.getConfirmationNumber();
+        }
+
+        else {
+            return 0L;
+        }
+
+>>>>>>> master:entities/Hotel.java
 	}
 
 	
 	public void checkin(long confirmationNumber) {
+<<<<<<< HEAD:src/entities/Hotel.java
 		// TODO Auto-generated method stub
+=======
+
+        Booking booking = findBookingByConfirmationNumber(confirmationNumber);
+
+        if(booking == null){
+
+            throw new RuntimeException();
+
+        }
+
+        else {
+
+            booking.checkIn();
+            booking.getRoom().checkin();
+            activeBookingsByRoomId.put(booking.getRoom().getId(),booking);
+
+        }
+>>>>>>> master:entities/Hotel.java
 	}
 
 
 	public void addServiceCharge(int roomId, ServiceType serviceType, double cost) {
+<<<<<<< HEAD:src/entities/Hotel.java
 		// TODO Auto-generated method stub
+=======
+
+	    Booking booking = activeBookingsByRoomId.get(roomId);
+
+	    if(booking == null ){
+
+	        throw new RuntimeException();
+        }
+        else {
+
+            booking.addServiceCharge(serviceType,cost);
+
+        }
+>>>>>>> master:entities/Hotel.java
 	}
 
 	
 	public void checkout(int roomId) {
+<<<<<<< HEAD:src/entities/Hotel.java
 		// TODO Auto-generated method stub
+=======
+
+	    Booking booking = activeBookingsByRoomId.get(roomId);
+
+	    if(booking == null){
+
+	        throw new RuntimeException();
+
+
+        }
+        else {
+
+            booking.checkOut();
+        }
+>>>>>>> master:entities/Hotel.java
 	}
 
 

@@ -8,9 +8,15 @@ import hotel.credit.CreditCard;
 import hotel.utils.IOUtils;
 
 public class Room {
+<<<<<<< HEAD:src/entities/Room.java
 	
 	private enum State {READY, OCCUPIED}
 	
+=======
+
+	private enum State {READY, OCCUPIED}
+
+>>>>>>> master:entities/Room.java
 	int id;
 	RoomType roomType;
 	List<Booking> bookings;
